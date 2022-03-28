@@ -1,13 +1,13 @@
-public class HelloWorld {
-    public static void main(String[] args) {
-        int myFavoriteNumber = 22;
-        System.out.println(myFavoriteNumber);
-
-        String myString ="3.14159";
-        System.out.println(myString);
-
-        float myNumber = 3.14F;
-        System.out.println(myNumber);
+//public class HelloWorld {
+//    public static void main(String[] args) {
+//        int myFavoriteNumber = 22;
+//        System.out.println(myFavoriteNumber);
+//
+//        String myString ="3.14159";
+//        System.out.println(myString);
+//
+//        float myNumber = 3.14F;
+//        System.out.println(myNumber);
 
 //        int x = 5;
 //        System.out.println(x++);
@@ -34,15 +34,15 @@ public class HelloWorld {
 //            y *= x;
 //        System.out.println("y = " + y);
         
-        int x = 10;
-        int y = 2;
+//        int x = 10;
+//        int y = 2;
 
 //        x /= y;
 //        System.out.println("x = " + x);
-
-        x = x / y;
-        y = y - x;
-        System.out.println("y = " + y);
-
-    }
-}
+//
+//        x = x / y;
+//        y = y - x;
+//        System.out.println("y = " + y);
+//
+//    }
+//}
