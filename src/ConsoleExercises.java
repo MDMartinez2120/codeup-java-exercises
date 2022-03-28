@@ -1,6 +1,19 @@
+import java.util.Scanner;
+
 public class ConsoleExercises {
     public static void main(String[] args) {
         double pi = 3.14159;
-        System.out.printf("the value of pi is approximately %s", pi);
+        System.out.format("the value of pi is approximately $%,.2f%n", pi);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your favorite number");
+        int userNumber = scanner.nextInt();
+        System.out.println(userNumber);
+        scanner.nextLine();
+        System.out.print("Enter 3 Words.");
+        String userWords = scanner.nextLine();
+        System.out.println(userWords);
+        System.out.print("Enter a sentence.");
+        String userSentence = scanner.nextLine();
+        System.out.println(userSentence);
     }
 }
