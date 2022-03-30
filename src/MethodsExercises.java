@@ -9,7 +9,8 @@ public class MethodsExercises {
 //        multiLoop(4,3);
 //        count(5);
 //        getInteger(1, 10);
-        numFact();
+//        numFact();
+        diceRoll();
 
     }
 //    public static void addNums(int num1, int num2){
@@ -61,23 +62,31 @@ public class MethodsExercises {
 //        }
 //    }
 
-    public static void numFact() {
-        int n, c, fact = 1;
-        System.out.print("Enter a number between 1 and 10: ");
+//    public static void numFact() {
+//        int n, c, fact = 1;
+//        System.out.print("Enter a number between 1 and 10: ");
+//        Scanner input = new Scanner(System.in);
+//
+//        int userInput = input.nextInt();
+//
+//        if (userInput < 0) {
+//            System.out.println("number should be more than 0.");
+//
+//        } else {
+//            for (c = 1; c <= userInput; c++)
+//                fact = fact * c;
+//
+//            System.out.println("Factorial of " + userInput + " is = " + fact);
+//        }
+//    }
+
+    public static void diceRoll(){
+        System.out.print("Enter the number on the side of: ");
         Scanner input = new Scanner(System.in);
-
         int userInput = input.nextInt();
-        System.out.println(userInput);
-
-        if (userInput < 0) {
-            System.out.println("number should be more than 0.");
-
-        } else {
-            for (c = 1; c <= userInput; c++)
-                fact = fact * c;
-
-            System.out.println("Factorial of " + userInput + " is = " + fact);
-        }
+        int userDie = (int)(Math.random()* userInput) + 1;
+        int userDie2 = (int)(Math.random()* userInput) + 1;
+        System.out.println("Your dice roll lands you " + userDie + userDie2);
     }
 
 };
