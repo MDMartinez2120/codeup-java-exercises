@@ -86,7 +86,8 @@ public class MethodsExercises {
         int userInput = input.nextInt();
         int userDie = (int)(Math.random()* userInput) + 1;
         int userDie2 = (int)(Math.random()* userInput) + 1;
-        System.out.println("Your dice roll lands you " + userDie + userDie2);
+        System.out.println("Your first dice roll lands you " + userDie);
+        System.out.println("Your second dice roll lands you " + userDie2);
     }
 
 };
