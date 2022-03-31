@@ -8,8 +8,8 @@ public class JavaWarmups {
                 return s.charAt(i);
             }
         }
+        return ' ';
     }
-    return '';
 }
 
 //    Create a method, returnFirstCapitalLetter, that takes in a string and returns the first capital letter as a char. If no capital letter is found, return a single space character ' '. Assume only letters in the input string and all possible inputs will have at least one letter.
