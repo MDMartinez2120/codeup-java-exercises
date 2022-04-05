@@ -1,50 +1,46 @@
 package util;
 
-import java.util.Objects;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Input {
-    private static Scanner sc = new Scanner(System.in);
+    private Scanner input = new Scanner(System.in);
 
-    public Input(){
-        this.sc = new Scanner(System.in);
+    String getString(){
+        System.out.println("Enter a string");
+        return input.nextLine();
     }
 
-    public String getString(){
-        return sc.next();
-    }
-
-    public int getInt(int min, int max){
-        System.out.println("Enter a number.");
-        Random random = new Random();
-        int randomNumber = random.nextInt(max + 1 - min) + min;
-        return sc.nextInt();
-    }
-
-    public int getInt(){
-        return sc.nextInt();
-    }
-
-    static double getDouble(double min, double max){
-        System.out.println("Enter a number.");
-        Random random = new Random();
-        int randomDecimal = (int) (random.nextInt((int) (max + 1 - min)) + min);
-        return sc.nextDouble();
-    }
-
-//    double getDouble(){
-//        return sc.nextDouble();
-//    }
-
-    public Boolean yesNo(){
-        Scanner userInput = new Scanner(System.in);
-        String answer = userInput.nextLine();
-        if (Objects.equals(answer, "yes")){
+    public boolean yesNo(){
+        System.out.println("Yes or No?");
+        String userInput = input.nextLine();
+        if (userInput.equals( "y")|| userInput.equals("Y") || userInput.equals("yes") || userInput.equals("Yes")) {
             return true;
-        }else return Objects.equals(answer, "y");
+        }
+        return false;
     }
-    static class InputTest {
+    public int getInt(int min, int max){
+        System.out.println("Enter a number between" + min + "and" + max + "int");
+        int userInt = input.nextInt();
+        if (userInt > min || userInt < max){
+            return getInt(min, max);
+        }
+        return userInt;
+    }
+    public int getInt(){
+        int userInt = input.nextInt();
+        return userInt;
+    }
+    public double getDouble(double min, double max){
+        System.out.println("Enter a number between" + min + "and" + max + "double");
+        int userDouble = input.nextInt();
+        if (userDouble > min || userDouble < max){
+            return getDouble(min, max);
+        }
+        return userDouble;
+    }
+    public double getDouble(){
+        double userDouble = input.nextDouble();
+        return userDouble;
+    }
 
-    }
 }
