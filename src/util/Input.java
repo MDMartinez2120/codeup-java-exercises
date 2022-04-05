@@ -1,10 +1,11 @@
 package util;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     public Input(){
         this.sc = new Scanner(System.in);
@@ -15,6 +16,9 @@ public class Input {
     }
 
     public int getInt(int min, int max){
+        System.out.println("Enter a number.");
+        Random random = new Random();
+        int randomNumber = random.nextInt(max + 1 - min) + min;
         return sc.nextInt();
     }
 
@@ -22,23 +26,25 @@ public class Input {
         return sc.nextInt();
     }
 
-    double getDouble(double min, double max){
+    static double getDouble(double min, double max){
+        System.out.println("Enter a number.");
+        Random random = new Random();
+        int randomDecimal = (int) (random.nextInt((int) (max + 1 - min)) + min);
         return sc.nextDouble();
     }
 
-    double getDouble(){
-        return sc.nextDouble();
-    }
+//    double getDouble(){
+//        return sc.nextDouble();
+//    }
 
     public Boolean yesNo(){
         Scanner userInput = new Scanner(System.in);
         String answer = userInput.nextLine();
         if (Objects.equals(answer, "yes")){
             return true;
-        }else if (Objects.equals(answer, "y")){
-            return true;
-        }else {
-            return false;
-        }
+        }else return Objects.equals(answer, "y");
+    }
+    static class InputTest {
+
     }
 }
