@@ -38,7 +38,7 @@ public class collectionsLecture {
         }
 
         //using keySet method to output all the coach names because they are keys. you
-        //have to use an enhanced loop to output all the keys AKA coach names.
+        //have to use an enhanced loop to output all the keys AKA coach names in this case.
 
         Set<String> coachNames = careerWins.keySet();
         for (String coachName : coachNames){
