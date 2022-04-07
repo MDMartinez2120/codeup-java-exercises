@@ -52,7 +52,6 @@ public class GradesApplication {
             }else {
                 System.out.println("invalid input dummy");
             }
-
         }
     }
 }
