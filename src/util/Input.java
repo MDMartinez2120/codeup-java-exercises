@@ -6,7 +6,6 @@ public class Input {
     private Scanner input = new Scanner(System.in);
 
     String getString(){
-        System.out.println("Enter a string");
         return input.nextLine();
     }
 
@@ -20,19 +19,20 @@ public class Input {
     }
     public int getInt(int min, int max){
         System.out.println("Enter a number between" + min + "and" + max + "int");
-        int userInt = input.nextInt();
+        int userInt = Integer.parseInt(getString());
         if (userInt > min || userInt < max){
             return getInt(min, max);
         }
         return userInt;
     }
-    public int getInt(){
-        int userInt = input.nextInt();
-        return userInt;
-    }
+//    public int getInt(){
+//        int userInt = input.nextInt();
+////        return userInt;
+//        return Integer.valueOf(getString());
+//    }
     public double getDouble(double min, double max){
         System.out.println("Enter a number between" + min + "and" + max + "double");
-        int userDouble = input.nextInt();
+        int userDouble = Integer.parseInt(getString());
         if (userDouble > min || userDouble < max){
             return getDouble(min, max);
         }
