@@ -18,36 +18,44 @@ public class Practice {
 //        }
 //    }
 // 4. Create a class called Pet with two String instance variables, name and type.
-    public static class pet {
 
+     public class pet {
+        public String name;
+        public String type;
+
+    // 5. Create getters and setters for the properties as well as a constructor that takes two strings and sets the name and type.
+
+    public String getName() {
+        return name;
     }
 
-// 5. Create getters and setters for the properties as well as a constructor that takes two strings and sets the name and type.
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getType() {
+        return type;
+    }
 
-
-
+    public void setType(String type) {
+        this.type = type;
+    }
+}
 
 // 6. Create a PetDog class that inherits from Pet.
-
-
-
-
-
+    public class PetDog extends pet{
 // 7. In PetDog, create a boolean instance variable, trained.
-
-
-
+       public boolean trained;
 
 //8. Write a constructor for PetDog that sets its name, type, and trained properties.
-
-
-
-
+    public PetDog(boolean trained, String name, String type) {
+        this.trained = trained;
+        this.name = name;
+        this.type = type;
 // 9. Write an instance method in PetDog  called isTrained that returns the boolean value of the trained property.
-
-
-
+        public boolean isTrained = new
+    }
+}
 
 // 10. Create an interface named Companion. The Companion interface should specify an instance method named snuggle that has no arguments and returns a String. Change your PetDog class so it implements the Companion interface. The implementation of the snuggle method on the PetDog class should return "name wants to snuggle", where name is the inherited instance property.
 
