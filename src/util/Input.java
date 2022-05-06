@@ -25,11 +25,19 @@ public class Input {
         }
         return userInt;
     }
-//    public int getInt(){
+    public int getInt(){
+        String userInput = getString();
+        try {
+            return Integer.parseInt(userInput);
+        }catch (NumberFormatException nfe){
+            System.out.println(nfe);
+        }
+        return getInt();
 //        int userInt = input.nextInt();
-////        return userInt;
+//        return userInt;
 //        return Integer.valueOf(getString());
-//    }
+    }
+
     public double getDouble(double min, double max){
         System.out.println("Enter a number between" + min + "and" + max + "double");
         int userDouble = Integer.parseInt(getString());
@@ -38,9 +46,17 @@ public class Input {
         }
         return userDouble;
     }
+
     public double getDouble(){
-        double userDouble = input.nextDouble();
-        return userDouble;
+        try {
+            double userInput = input.nextDouble();
+            return userInput;
+        }catch (Exception exception){
+            input.nextLine();
+            return getDouble();
+        }
+//        double userDouble = input.nextDouble();
+//        return userDouble;
     }
 
     public double getDouble(String enter_radius) {
