@@ -43,4 +43,7 @@ public class Input {
         return userDouble;
     }
 
+    public double getDouble(String enter_radius) {
+        return getDouble();
+    }
 }
